@@ -1,5 +1,7 @@
 <?php
 
+namespace Hillel;
+
 class ValueObject
 {
     private $red;
@@ -8,21 +10,21 @@ class ValueObject
 
     public function __construct($red = '', $green = '', $blue = '') 
     {
-        if(!empty($red) && $red != '')
+        if(!empty($red) || $red === 0)
         {
             $this->setRed($red);
         } else {
             $this->setRed(rand(0, 255));
         }
         
-        if(!empty($green) && $green != '')
+        if(!empty($green) || $green === 0)
         {
             $this->setGreen($green);
         } else {
             $this->setGreen(rand(0, 255));
         }
 
-        if(!empty($blue) && $blue != '')
+        if(!empty($blue) || $blue === 0)
         {
             $this->setBlue($blue);
         } else {
@@ -32,13 +34,13 @@ class ValueObject
 
     private function controlRgb($val)
     {
-        if (!is_int($val)) 
+        if (!is_int($val) && !is_numeric($val)) 
         {
-            throw new InvalidArgumentException("Not integer");
+            throw new \InvalidArgumentException("Not integer");
         }
         if ($val != 0 && $val < 0 && $val > 255) 
         {
-            throw new InvalidArgumentException("Please enter a valid integer between 0 and 255");
+            throw new \InvalidArgumentException("Please enter a valid integer between 0 and 255");
         }
     }
 
