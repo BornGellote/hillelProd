@@ -2,6 +2,8 @@
 
 namespace Hillel;
 
+use \InvalidArgumentException;
+
 class ValueObject
 {
     private $red;
@@ -36,11 +38,11 @@ class ValueObject
     {
         if (!is_int($val) && !is_numeric($val)) 
         {
-            throw new \InvalidArgumentException("Not integer");
+            throw new InvalidArgumentException("Not integer");
         }
         if ($val != 0 && $val < 0 && $val > 255) 
         {
-            throw new \InvalidArgumentException("Please enter a valid integer between 0 and 255");
+            throw new InvalidArgumentException("Please enter a valid integer between 0 and 255");
         }
     }
 

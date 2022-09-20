@@ -2,6 +2,8 @@
 
 namespace Hillel;
 
+use \InvalidArgumentException;
+
 class Money
 {
     private $amount;
@@ -17,7 +19,7 @@ class Money
     {
         if (is_int($val) && !is_numeric($val)) 
         {
-            throw new \InvalidArgumentException("Not integer");
+            throw new InvalidArgumentException("Not integer");
         }
     }
 
@@ -62,7 +64,7 @@ class Money
             return new Money($this->amount + $objectAdd->getAmount(), $this->currency);
         } else 
         {
-            throw new \InvalidArgumentException("Сurrency does not match");
+            throw new InvalidArgumentException("Сurrency does not match");
         }
     }
     
