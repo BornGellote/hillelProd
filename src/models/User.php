@@ -1,6 +1,8 @@
 <?php
 
 namespace Hillel\Models;
+
+use \InvalidArgumentException;
 use \Hillel\Models\Model();
 
 final class User extends Model()

@@ -2,6 +2,8 @@
 
 namespace Hillel\Models;
 
+use \InvalidArgumentException;
+
 abstract class Model
 {
     private $id;
