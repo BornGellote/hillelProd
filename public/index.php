@@ -1,15 +1,11 @@
 <?php 
-header("Content-Type: text/plain; charset=utf-8");
 
-require __DIR__ . '../../vendor/autoload.php';
+require_once __DIR__ . '../../vendor/autoload.php';
+require_once __DIR__ . '../../config/database.php';
+require_once __DIR__ . '../../config/blade.php';
 
-$objCurrency1 = new \Hillel\Currency("usd");
- $objCurrency2 = new \Hillel\Currency("usd");
- $objEquals = $objCurrency1->equalsIsoCode($objCurrency2);
- var_dump($objCurrency1, $objCurrency2, $objEquals);
+$title = 'Hello World';
+$posts = \Hillel\Models\Post::all();
 
- $objMoney1 = new \Hillel\Money(34, $objCurrency1->getIsoCode());
- $objMoney2 = new \Hillel\Money(4, $objCurrency2->getIsoCode());
- $objEqualsMoney = $objMoney1->equalsAmount($objMoney2);
- $objMonet12 = $objMoney1->addAmount($objMoney2);
- var_dump($objMoney1, $objMoney2, $objEqualsMoney, $objMonet12);
+/** @var $blade */
+echo $blade->make('pages/index', compact('title', 'posts'))->render();
