@@ -44,10 +44,6 @@ foreach ($catAll as $cat)
 // $postDel = Post::find(7);
 // $postDel->delete();
 
-// $postTags = Post::find(3);
-// $postTags->tag()->sync([4,5,1]);
-//$order->products()->attach([2]);
-
 echo '<br> table Post: <br>';
 $postAll = Post::all();
 foreach ($postAll as $post)
@@ -58,14 +54,6 @@ foreach ($postAll as $post)
    } 
    echo '<br>'; 
 }
-
-//$orders = Order::all();
-//foreach ($orders as $order) {
-//    echo $order->id .' '.$order->title . ': <br>';
-//    foreach ($order->products as $product) {
-//        echo $product->name . ': <br>';
-//    }
-//}
 
 // $modelTag = new Tag;
 // $modelTag->title = 'test 0';
