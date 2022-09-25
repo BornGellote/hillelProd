@@ -1,25 +1,6 @@
 @extends('layout')
 
-@section('title', 'Home page')
-
-
-@section('breadcrumbs')
-    @include('partials.breadcrumbs', [
-        'links' => [
-            [
-                'link' => 'index.php',
-                'name' => 'Home',
-            ], [
-                'link' => 'list-categories.php',
-                'name' => 'Categories',
-            ], [
-                'link' => 'list-tags.php',
-                'name' => 'Tags',
-            ]
-        ]
-    ])
-@endsection
-   
+@section('title', 'Home page')   
 
 @section('content')
     <div class="ttl-main">
