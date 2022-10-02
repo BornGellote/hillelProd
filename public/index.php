@@ -3,9 +3,17 @@
 require_once __DIR__ . '../../vendor/autoload.php';
 require_once __DIR__ . '../../config/database.php';
 require_once __DIR__ . '../../config/blade.php';
+require_once __DIR__ . '../../config/router.php';
 
-$title = 'Hello World';
-$posts = \Hillel\Models\Post::all();
+/**
+ * @var Illuminate\Routing\Router $router
+ */
+/**
+ * @var Illuminate\Http\Request $request
+ */
 
-/** @var $blade */
-echo $blade->make('pages/index', compact('title', 'posts'))->render();
+$responce = $router->dispatch($request);
+echo $responce->getContent();
+
+// $app = new \Hillel\Base\Application;
+// $app->run();

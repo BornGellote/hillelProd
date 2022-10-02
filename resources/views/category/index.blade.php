@@ -7,7 +7,7 @@
         <h1>{{ $title }}</h1>
     </div>
     <div class="content-main">
-        <a href="/public/category/create.php" class="btn btn-primary">Add Category</a>
+        <a href="/category/create" class="btn btn-primary">Add Category</a>
         <table class="table">
             <thead>
                 <tr>
@@ -28,8 +28,9 @@
                         <td>{{ $cat->created_at }}</td>
                         <td>{{ $cat->uploaded_at }} </td>
                         <td>
-                            <a href="/public/category/update.php?id={{ $cat->id }}">Upload</a>
-                            <a href="/public/category/delete.php?id={{ $cat->id }}">Delete</a>
+                            <a href="/category/{{ $cat->id }}/edit">Upload</a>
+                            <a href="/category/{{ $cat->id }}/delete">Delete</a>
+                            <a href="/category/{{ $cat->id }}/show">Show</a>
                         </td>
                     </tr>
                 @empty

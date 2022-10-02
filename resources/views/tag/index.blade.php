@@ -7,7 +7,7 @@
         <h1>{{ $title }}</h1>
     </div>
     <div class="content-main">
-        <a href="/public/tag/create.php" class="btn btn-primary">Add Tag</a>
+        <a href="/tag/create" class="btn btn-primary">Add Tag</a>
         <table class="table">
             <thead>
                 <tr>
@@ -28,8 +28,9 @@
                         <td>{{ $tag->created_at }}</td>
                         <td>{{ $tag->uploaded_at }} </td>
                         <td>
-                            <a href="/public/tag/update.php?id={{ $tag->id }}">Upload</a>
-                            <a href="/public/tag/delete.php?id={{ $tag->id }}">Delete</a>
+                            <a href="/tag/{{ $tag->id }}/edit">Upload</a>
+                            <a href="/tag/{{ $tag->id }}/delete">Delete</a>
+                            <a href="/tag/{{ $tag->id }}/show">Show</a>
                         </td>
                     </tr>
                 @empty

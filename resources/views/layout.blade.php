@@ -24,13 +24,13 @@
           <div class="col-12">
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link" href="/public">Home</a>
+                <a class="nav-link" href="/contact">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/public/category">category</a>
+                <a class="nav-link" href="/category">category</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/public/tag">tag</a>
+                <a class="nav-link" href="/tag">tag</a>
               </li>
             </ul>
           </div>
