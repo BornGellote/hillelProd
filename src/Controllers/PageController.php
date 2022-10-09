@@ -8,9 +8,4 @@ class PageController
     {
         echo 'contact - 19adwawdaw816516';
     }
-
-    public function home()
-    {
-        echo 'home - 19adwawdaw816516';
-    }
 }

@@ -8,29 +8,22 @@
   </head>
   <body>
 
-    <!-- <section class="menu">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            @yield('breadcrumbs')
-          </div>    
-        </div>
-      </div>   
-    </section>   -->
-
     <section class="main">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <ul class="nav">
               <li class="nav-item">
+                <a class="nav-link" href="/post">Post</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/category">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/tag">Tag</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="/contact">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/category">category</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/tag">tag</a>
               </li>
             </ul>
           </div>

@@ -3,9 +3,14 @@
 @section('title', 'Tags')
 
 @section('content')
-    <div class="ttl-main">
-        <h1>{{ $title }}</h1>
-    </div>
+    @isset($_SESSION['success'])
+        <div class="alert alert-success" role="alert">
+            {{ $_SESSION['success'] }}
+        </div>
+    @endisset
+    @php
+        unset($_SESSION['success']);
+    @endphp
     <div class="content-main">
         <a href="/tag/create" class="btn btn-primary">Add Tag</a>
         <table class="table">

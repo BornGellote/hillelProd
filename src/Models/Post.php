@@ -8,12 +8,17 @@ class Post extends Model
 {
     public function category()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Category::class, 'post2category')->withTimestamps();
     }
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class)->withTimestamps();
+        return $this->belongsToMany(Tag::class, 'post2tag')->withTimestamps();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
 }

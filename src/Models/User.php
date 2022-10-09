@@ -4,11 +4,12 @@ namespace Hillel\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class User extends Model
 {
+    public $timestamps = false;
+
     public function post()
     {
-        return $this->belongsToMany(Product::class, 'post2category')->withTimestamps();
+        return $this->hasMany(Post::class);
     }
-
 }

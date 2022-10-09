@@ -3,9 +3,14 @@
 @section('title', 'Categories')
 
 @section('content')
-    <div class="ttl-main">
-        <h1>{{ $title }}</h1>
-    </div>
+    @isset($_SESSION['success'])
+        <div class="alert alert-success" role="alert">
+            {{ $_SESSION['success'] }}
+        </div>
+    @endisset
+    @php
+        unset($_SESSION['success']);
+    @endphp
     <div class="content-main">
         <a href="/category/create" class="btn btn-primary">Add Category</a>
         <table class="table">
